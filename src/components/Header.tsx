@@ -3,7 +3,6 @@ import {
   FaEnvelope,
   FaFacebook,
   FaTwitter,
-  FaYoutube,
   FaLinkedin,
   FaInstagram,
   FaClock,

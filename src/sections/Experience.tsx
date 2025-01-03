@@ -1,5 +1,5 @@
 import React from 'react'
-import { constructionhat, constructionmen, engineer } from '../assets/images'
+import { constructionmen, engineer } from '../assets/images'
 
 const Experience: React.FC = () => {
   return (
