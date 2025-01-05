@@ -28,9 +28,9 @@ const Welcome: React.FC = () => {
 
       {/* Right Text Section */}
       <div className="w-full md:w-1/2 p-8 flex items-center justify-center overflow-hidden animate-slideUp">
-        <div className="relative h-64 w-full">
+        <div className="relative h-64 max-md:h-70 w-full">
           <div className="absolute text-content-container">
-            <h1 className="text-xl mb-4">
+            <h1 className="text-xl md:mb-4 mb-2">
               Welcome to
               <span className="text-blue-500">
                 {' '}
@@ -38,8 +38,8 @@ const Welcome: React.FC = () => {
               </span>
             </h1>
             <p className="leading-relaxed mb-8">
-              <span className="text-6xl font-bold">A Leading</span>{' '}
-              <em className="ml-2 text-6xl text-blue-400">
+              <span className="md:text-6xl max-md:text-4xl font-bold">A Leading</span>{' '}
+              <em className="ml-2 md:text-6xl max-md:text-4xl text-blue-400">
                 {' '}
                 Player in Oil and Gas
               </em>
