@@ -19,7 +19,7 @@ const Partners: React.FC = () => {
         <h2 className="text-3xl text-nowrap font-bold mx-4">Our Partners</h2>
         <hr className="w-1/3 border-t-3 border-blue-600" />
       </div>
-      <div className="flex max-md:grid max-md:grid-cols-2 items-center justify-center gap-8 mt-4 max-md:p-2">
+      <div className="flex flex-wrap max-md:grid max-md:grid-cols-2 items-center justify-center gap-8 mt-4 max-md:p-2">
         {partnersLogos.map((logo, index) => (
           <img
             key={index}
