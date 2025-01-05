@@ -11,7 +11,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, imageUrl}) => {
         <div className="flex flex-col gap-3">
           <h1 className="font-semibold text-xl">{title}</h1>
           <div className="">
-            <img src={imageUrl} alt={title} className='w-[300px] h-[300px]' />
+            <img src={imageUrl} alt={title} className='w-[300px] h-[230px]' />
           </div>
         </div>
       </div>
