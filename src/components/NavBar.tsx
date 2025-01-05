@@ -17,8 +17,10 @@ const NavBar: React.FC = () => {
         <div className="flex items-center gap-1">
           <img src={logo} width={60} height={60} alt="" />
           <div className="flex flex-col gap-0 text-gray-700">
-            <span className='text-2xl text-blue-500 font-semibold'>SKYSHORE </span>{' '}
-            <span className='text-[10px]'>Downstream and Marketing Ltd </span>
+            <span className="text-2xl text-blue-700 font-bold">
+              SKYSHORE{' '}
+            </span>{' '}
+            <span className="text-[10px]">Downstream and Marketing Ltd </span>
           </div>
         </div>
 
@@ -78,17 +80,17 @@ const NavBar: React.FC = () => {
               Contact
             </Link>
           </li>
-          <li>
-            <Link to="/">
-              <button
-                onClick={toggleMenu}
-                className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                Visit Home
-              </button>
-            </Link>
-          </li>
         </ul>
+        <div className='max-md:hidden'>
+          <Link to="/">
+            <button
+              onClick={toggleMenu}
+              className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+            >
+              Visit Home
+            </button>
+          </Link>
+        </div>
       </div>
     </nav>
   )

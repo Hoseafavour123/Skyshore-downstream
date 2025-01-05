@@ -5,9 +5,9 @@ import ServiceCard from '../components/ServiceCard';
 const Services: React.FC = () => {
     return (
       <div className="">
-        <p className="text-xl text-center text-blue-500 mb-2">OUR SERVICES</p>
+        <p className="text-xl text-center text-blue-500 mb-2">OUR PRODUCTS</p>
         <p className="text-5xl text-center font-semibold">
-          High Quality Services
+          High Quality Products
         </p>
 
         <div className="mt-5 bg-gradient-to-r from-purple-200 via-blue-200 to-white p-12 rounded-xl shadow-lg">
@@ -17,9 +17,7 @@ const Services: React.FC = () => {
                 <ServiceCard
                   key={id}
                   title={service.title}
-                  description={service.description}
                   imageUrl={service.imageUrl}
-                  link={service.link}
                 />
               ))}
             </div>

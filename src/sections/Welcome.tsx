@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { constructionmen, engineer, constructionhat, engineer_2, engineer_3  } from '../assets/images'; // Add your images here
+import { shore1, shore2, shore3 } from '../assets/images'; // Add your images here
 
 const Welcome: React.FC = () => {
-  const images = [constructionmen, engineer, constructionhat, engineer_2, engineer_3]; // Array of image sources
+  const images = [shore1, shore2, shore3]; // Array of image sources
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 5 seconds
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, 3000); 
+    return () => clearInterval(interval); 
   }, [images.length]);
 
   return (
@@ -34,20 +34,19 @@ const Welcome: React.FC = () => {
               Welcome to
               <span className="text-blue-500">
                 {' '}
-                SkyShore Shipping and Energy Limited{' '}
+                SkyShore Downstream and Marketing Limited{' '}
               </span>
             </h1>
             <p className="leading-relaxed mb-8">
-              <span className="text-6xl font-bold">Leading</span>{' '}
-              <em className="ml-2 font-semibold text-6xl text-blue-400">
+              <span className="text-6xl font-bold">A Leading</span>{' '}
+              <em className="ml-2 text-6xl text-blue-400">
                 {' '}
-                Nigeria's Maritime
+                Player in Oil and Gas
               </em>
             </p>
             <p className="leading-relaxed mt-4">
-              Discover tools and resources that empower individuals and
-              businesses to achieve their goals. Inspire, innovate, and
-              transform your vision into reality.
+              SDM remains dedicated to driving growth and sustainability within
+              the energy sector.
             </p>
             <button className="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors">
               <Link to="/">Learn more</Link>
@@ -56,7 +55,7 @@ const Welcome: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 export default Welcome;
