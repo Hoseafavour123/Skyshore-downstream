@@ -12,7 +12,7 @@ import {
 
 const Header: React.FC = () => {
     return (
-      <div className="w-full mt-0 bg-[#06277B] h-auto p-4">
+      <div className="max-md:hidden w-full mt-0 bg-[#06277B] h-auto p-4">
         <header className="container mx-auto flex p-4 justify-between items-center text-white">
           <div>
             <div className="flex justify-between gap-5">

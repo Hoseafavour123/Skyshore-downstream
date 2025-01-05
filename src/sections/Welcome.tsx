@@ -1,15 +1,26 @@
-import React from 'react'
-import { constructionmen } from '../assets/images'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { constructionmen, engineer, constructionhat, engineer_2, engineer_3  } from '../assets/images'; // Add your images here
 
 const Welcome: React.FC = () => {
+  const images = [constructionmen, engineer, constructionhat, engineer_2, engineer_3]; // Array of image sources
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 5 seconds
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [images.length]);
+
   return (
-    <div className="relative flex flex-col md:flex-row bg-gradient-to-r from-blue-100 to-white overflow-hidden">
-      <div className="w-full md:w-1/2 h-64 md:h-full relative">
+    <div className="relative flex flex-col md:flex-row bg-gradient-to-r from-blue-100 to-white overflow-hidden z-0">
+      {/* Left Image Slider Section */}
+      <div className="w-full max-md:hidden md:w-1/2 h-64 md:h-full relative">
         <img
-          src={constructionmen}
-          alt="Placeholder"
-          className="w-full h-full object-cover"
+          src={images[currentImageIndex]}
+          alt={`Slide ${currentImageIndex + 1}`}
+          className="w-full h-full object-cover transition-opacity duration-500 ease-in-out"
         />
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-blue-300"></div>
@@ -20,7 +31,7 @@ const Welcome: React.FC = () => {
         <div className="relative h-64 w-full">
           <div className="absolute text-content-container">
             <h1 className="text-xl mb-4">
-              Welcome to{' '}
+              Welcome to
               <span className="text-blue-500">
                 {' '}
                 SkyShore Shipping and Energy Limited{' '}
@@ -45,7 +56,7 @@ const Welcome: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;

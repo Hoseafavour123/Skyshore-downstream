@@ -14,13 +14,14 @@ const Home: React.FC = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto mt-16 mb-10">
+      <div className="z-50 container mx-auto md:mt-16 mb-10">
         <NavBar />
       </div>
 
       <div className="">
         <Welcome />
       </div>
+
 
       <div className="container mx-auto mt-[120px]  mb-10">
         <Experience />

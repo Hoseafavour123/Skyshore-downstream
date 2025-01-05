@@ -1,60 +1,92 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBicycle } from 'react-icons/fa'
+import { HiMenu, HiX } from 'react-icons/hi' // Hamburger and close icons
 
 const NavBar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <nav className="bg-white shadow-md p-4">
-      <ul className="flex justify-around items-center">
+    <nav className="bg-white shadow-md p-4 w-full max-md:top-0 z-50">
+      <div className="container mx-auto flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center gap-2">
           <FaBicycle className="text-4xl text-blue-500" />
           <span className="text-xl font-bold text-gray-700">SkyShore</span>
         </div>
 
-        {/* Navigation Links */}
-        <li className="relative">
-          <Link
-            to="/"
-            className="relative text-gray-700 hover:text-blue-500 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
+        {/* Hamburger Menu for Mobile */}
+        <div className="md:hidden ">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700 focus:outline-none"
           >
-            Home
-          </Link>
-        </li>
-        <li className="relative">
-          <Link
-            to="/about"
-            className="relative text-gray-700 hover:text-blue-500 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
-          >
-            About
-          </Link>
-        </li>
-        <li className="relative">
-          <Link
-            to="/services"
-            className="relative text-gray-700 hover:text-blue-500 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
-          >
-            Services
-          </Link>
-        </li>
-        <li className="relative">
-          <Link
-            to="/contact"
-            className="relative text-gray-700 hover:text-blue-500 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
-          >
-            Contact
-          </Link>
-        </li>
+            {isMenuOpen ? (
+              <HiX className="fixed z-50 right-5 top-3 text-3xl text-gray-700" />
+            ) : (
+              <HiMenu className="text-3xl text-gray-700" />
+            )}
+          </button>
+        </div>
 
-        {/* Button */}
-        <li>
-          <Link to="/">
-            <button className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-              Visit Home
-            </button>
-          </Link>
-        </li>
-      </ul>
+        {/* Navigation Links */}
+        <ul
+          className={`max-md:fixed inset-0 bg-white z-40 p-8 flex flex-col space-y-4 items-center transform ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          } transition-transform duration-300 md:static md:flex md:flex-row md:space-y-0 md:space-x-8 md:translate-x-0 md:p-0 md:bg-transparent`}
+        >
+          <li>
+            <Link
+              to="/"
+              className="text-gray-700 hover:text-blue-500 transition-colors"
+              onClick={toggleMenu}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="text-gray-700 hover:text-blue-500 transition-colors"
+              onClick={toggleMenu}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              className="text-gray-700 hover:text-blue-500 transition-colors"
+              onClick={toggleMenu}
+            >
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="text-gray-700 hover:text-blue-500 transition-colors"
+              onClick={toggleMenu}
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <button
+                onClick={toggleMenu}
+                className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                Visit Home
+              </button>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }

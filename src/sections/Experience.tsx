@@ -23,19 +23,19 @@ const Experience: React.FC = () => {
       </div>
 
       {/* Right Image Section with Animating Rectangles */}
-      <div className="w-full md:w-1/2 md:h-full relative">
+      <div className="w-full md:w-1/2 md:h-full relative max-md:m-1">
         <img
           src={constructionmen}
           height={1200}
           alt="Placeholder"
-          className="w-full h-full object-cover"
+          className="w-full max-md:w-[98%] h-full object-cover"
         />
 
         {/* Animated Rectangles */}
-        <div className="absolute -left-10 top-5 blue-500 animate-moveUpDown">
+        <div className="absolute max-md:bottom-0 max-md:top-auto max-md:right-2 max-md:left-auto -left-10 top-5 blue-500 animate-moveUpDown">
           <img src={engineer} width={220} height={300} />
         </div>
-        <div className="flex justify-between gap-6 py-8 px-5  bg-blue-600 text-white absolute -left-10 bottom-1 animate-moveUpDown rounded-xl">
+        <div className="max-md:hidden flex justify-between gap-6 py-8 px-5  bg-blue-600 text-white absolute -left-10 bottom-1 animate-moveUpDown rounded-xl">
           <p className='font-bold text-3xl'>15+ <br />years</p>
           <p className='text-xl font-semibold'>of <br />experience in <br />oil and gas</p>
         </div>
