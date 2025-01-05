@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBicycle } from 'react-icons/fa'
 import { HiMenu, HiX } from 'react-icons/hi' // Hamburger and close icons
+import { logo } from '../assets/icons'
 
 const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,9 +14,12 @@ const NavBar: React.FC = () => {
     <nav className="bg-white shadow-md p-4 w-full max-md:top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex items-center gap-2">
-          <FaBicycle className="text-4xl text-blue-500" />
-          <span className="text-xl font-bold text-gray-700">SkyShore</span>
+        <div className="flex items-center gap-1">
+          <img src={logo} width={60} height={60} alt="" />
+          <div className="flex flex-col gap-0 text-gray-700">
+            <span className='text-2xl text-blue-500 font-semibold'>SKYSHORE </span>{' '}
+            <span className='text-[10px]'>Downstream and Marketing Ltd </span>
+          </div>
         </div>
 
         {/* Hamburger Menu for Mobile */}
