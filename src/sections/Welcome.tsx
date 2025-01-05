@@ -37,14 +37,14 @@ const Welcome: React.FC = () => {
                 SkyShore Downstream and Marketing Limited{' '}
               </span>
             </h1>
-            <p className="leading-relaxed mb-8">
+            <p className="leading-relaxed mb-8 max-md:mt-2">
               <span className="md:text-6xl max-md:text-4xl font-bold">A Leading</span>{' '}
               <em className="ml-2 md:text-6xl max-md:text-4xl text-blue-400">
                 {' '}
                 Player in Oil and Gas
               </em>
             </p>
-            <p className="leading-relaxed mt-4">
+            <p className="max-md:hidden leading-relaxed mt-4">
               SDM remains dedicated to driving growth and sustainability within
               the energy sector.
             </p>
