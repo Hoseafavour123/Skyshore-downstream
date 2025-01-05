@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
 
         <div className="flex-1 bg-white p-3 rounded-lg shadow-lg">
           <form action="#" method="POST">
-            <div className='flex justify-between'>
+            <div className='md:flex md:justify-between'>
               <div className="mb-4">
                 <label
                   htmlFor="name"
