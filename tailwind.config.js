@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       animation: {
-        seamlessMarquee: 'seamlessMarquee 5s linear infinite',
+        seamlessMarquee: 'seamlessMarquee 3s linear infinite',
         slideUp: 'slideUp 5s ease-out forwards infinite',
         moveUpDown: 'moveUpDown 2s ease-in-out infinite',
       },

@@ -15,28 +15,27 @@ type Service = {
 
 export const services: Service[] = [
   {
-    imageUrl: chemicals,
-    title: 'Commodity Chemicals',
-  },
-  {
     imageUrl: petroleum,
-    title: 'Petroleum Products'
+    title: 'Petroleum Products',
   },
   {
-    imageUrl: cng,
-    title: 'CNG',
+    imageUrl: lubricants,
+    title: 'Lubricants',
   },
   {
     imageUrl: lpg,
     title: 'LPG',
   },
   {
+    imageUrl: cng,
+    title: 'CNG',
+  },
+  {
     imageUrl: bitumen,
     title: 'Bitumen',
   },
   {
-    imageUrl: lubricants,
-    title: 'Lubricants'
+    imageUrl: chemicals,
+    title: 'Commodity Chemicals',
   },
-
 ]

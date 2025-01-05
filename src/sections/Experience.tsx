@@ -1,5 +1,6 @@
 import React from 'react'
 import { shore3, shore2 } from '../assets/images'
+import { Link } from 'react-router-dom'
 
 const Experience: React.FC = () => {
   return (
@@ -21,8 +22,12 @@ const Experience: React.FC = () => {
           </p>
           <br />
           <p>
-          Skyshore Downstream was carved out of SkyShore Shipping and Energy Ltd (SSL), another member of Skyshore Group Ltd.
+            Skyshore Downstream was carved out of SkyShore Shipping and Energy
+            Ltd (SSL), another member of Skyshore Group Ltd.
           </p>
+          <button className="mt-4 bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+            <Link to="/">Learn more</Link>
+          </button>
         </div>
       </div>
 

@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
 
         {/* Footer Text */}
         <p className="text-center mt-8 text-sm md:text-base">
-          &copy; {new Date().getFullYear()} Skyshore Shipping and Energy
+          &copy; {new Date().getFullYear()} Skyshore Downstream and Marketing
           Limited. All rights reserved.
         </p>
       </div>

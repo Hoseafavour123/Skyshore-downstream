@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
                 htmlFor="topic"
                 className="block text-gray-600 mb-2"
               >
-                Business Topic
+                Message Title
               </label>
               <input
                 type="text"
