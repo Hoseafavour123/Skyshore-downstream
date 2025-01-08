@@ -64,7 +64,7 @@ const NavBar: React.FC = () => {
           </li>
           <li>
             <Link
-              to="/services"
+              to="/products"
               className="text-gray-700 hover:text-blue-500 transition-colors"
               onClick={toggleMenu}
             >

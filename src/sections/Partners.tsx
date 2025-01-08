@@ -11,6 +11,7 @@ const partnersLogos = [
   lubric,
 ]
 
+
 const Partners: React.FC = () => {
   return (
     <section className="mt-10 py-10 max-md:p-2">

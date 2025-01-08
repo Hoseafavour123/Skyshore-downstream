@@ -1,5 +1,5 @@
 import React from 'react'
-import { shore3, shore2 } from '../assets/images'
+import { about1, about2 } from '../assets/images'
 import { Link } from 'react-router-dom'
 
 const Experience: React.FC = () => {
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
       {/* Right Image Section with Animating Rectangles */}
       <div className="w-full md:w-1/2 md:h-full relative max-md:m-1">
         <img
-          src={shore2}
+          src={about1}
           height={1200}
           alt="Placeholder"
           className="w-full max-md:w-[98%] h-[500px] object-cover"
@@ -42,7 +42,7 @@ const Experience: React.FC = () => {
 
         {/* Animated Rectangles */}
         <div className="absolute max-md:bottom-0 max-md:top-auto max-md:right-2 max-md:left-auto -left-10 top-5 blue-500 animate-moveUpDown">
-          <img src={shore3} width={220} height={300} />
+          <img src={about2} width={220} height={300} />
         </div>
         <div className="max-md:hidden flex justify-between gap-6 py-8 px-5  bg-blue-600 text-white absolute -left-10 bottom-1 animate-moveUpDown rounded-xl">
           <p className="font-bold text-3xl">

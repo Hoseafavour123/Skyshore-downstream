@@ -4,6 +4,8 @@ import engineer from './engineer.avif'
 import engineer_2 from './enginerr2.jpg'
 import engineer_3 from './engineer3.webp'
 import deepBlue from './deepBlue.jpeg'
+import about1 from './about.jpg'
+import about2 from './truckabout2.jpg'
 
 
 import chemicals from './chemicals.jpg'
@@ -25,6 +27,8 @@ export {
     engineer_2,
     engineer_3,
     deepBlue,
+    about1,
+    about2,
 
     chemicals,
     lubricants,
