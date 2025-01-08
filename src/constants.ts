@@ -14,6 +14,11 @@ type Product = {
   description?: string
 }
 
+type ProductDetail = {
+  productId: number
+  items: Product[]
+}
+
 type Value = {
   title: string
   description: string
@@ -63,6 +68,8 @@ export const products: Product[] = [
       'We partner with companies across the world to establish and maintain strong relationships that allows us to source the highest quality special chemical products available ',
   },
 ]
+
+export const productDetails: ProductDetail[] = []
 
 export const values: Value[] = [
   {
